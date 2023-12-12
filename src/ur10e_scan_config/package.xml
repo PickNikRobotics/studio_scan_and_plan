@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ur10e_scan_config</name>
+  <version>1.9.0</version>
+
+  <description>Config package for UR-10e that scans objects</description>
+
+  <maintainer email="marq.rasmussen@picknik.ai">Marq Rasmussen</maintainer>
+
+  <license>Proprietary</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>moveit_ros_perception</exec_depend>
+  <exec_depend>moveit_studio_behavior</exec_depend>
+  <exec_depend>moveit_studio_plugins</exec_depend>
+  <exec_depend>moveit_studio_ur_pstop_manager</exec_depend>
+  <exec_depend>pick_ik</exec_depend>
+  <exec_depend>picknik_accessories</exec_depend>
+  <exec_depend>realsense2_description</exec_depend>
+  <exec_depend>robotiq_description</exec_depend>
+  <!-- exec_depend>scan_behaviors</exec_depend -->
+  <exec_depend>trac_ik_kinematics_plugin</exec_depend>
+  <exec_depend>ur_description</exec_depend>
+  <exec_depend>ur_robot_driver</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+
+  <test_depend>ament_clang_format</test_depend>
+  <test_depend>ament_clang_tidy</test_depend>
+  <test_depend>ament_cmake_copyright</test_depend>
+  <test_depend>ament_cmake_lint_cmake</test_depend>
+  <test_depend>picknik_ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

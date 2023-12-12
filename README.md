@@ -13,7 +13,7 @@ STUDIO_CONFIG_PACKAGE="ur10e_scan_config"
 
 <img src="https://picknik.ai/assets/images/logo.jpg" width="100">
 
-[![Format Status](https://github.com/PickNikRobotics/scan_shot_config/actions/workflows/format.yaml/badge.svg)](https://github.com/PickNikRobotics/scan_shot_config/actions/workflows/format.yaml)
+[![Format Status](https://github.com/PickNikRobotics/studio_scan_and_plan/actions/workflows/format.yaml/badge.svg)](https://github.com/PickNikRobotics/studio_scan_and_plan/actions/workflows/format.yaml)
 
 ---
 

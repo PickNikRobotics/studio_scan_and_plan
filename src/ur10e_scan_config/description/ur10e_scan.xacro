@@ -3,10 +3,10 @@
   <!-- parameters -->
   <xacro:arg name="use_sim" default="true" />
   <xacro:arg name="name" default="" />
-  <xacro:arg name="joint_limits_parameters_file" default="$(find ur_description)/config/ur5e/joint_limits.yaml"/>
-  <xacro:arg name="kinematics_parameters_file" default="$(find ur_description)/config/ur5e/default_kinematics.yaml"/>
-  <xacro:arg name="physical_parameters_file" default="$(find ur_description)/config/ur5e/physical_parameters.yaml"/>
-  <xacro:arg name="visual_parameters_file" default="$(find ur_description)/config/ur5e/visual_parameters.yaml"/>
+  <xacro:arg name="joint_limits_parameters_file" default="$(find ur_description)/config/ur10e/joint_limits.yaml"/>
+  <xacro:arg name="kinematics_parameters_file" default="$(find ur_description)/config/ur10e/default_kinematics.yaml"/>
+  <xacro:arg name="physical_parameters_file" default="$(find ur_description)/config/ur10e/physical_parameters.yaml"/>
+  <xacro:arg name="visual_parameters_file" default="$(find ur_description)/config/ur10e/visual_parameters.yaml"/>
 
   <xacro:arg name="headless_mode" default="false" />
   <xacro:arg name="robot_ip" default="192.168.7.11" />

@@ -17,4 +17,4 @@ manipulator:
   # Gradient descent options
   gd_max_iters: 100
   gd_step_size: 0.0001
-  
+

@@ -19,7 +19,7 @@
         <link name="robotiq_85_right_finger_link"/>
         <joint name="robotiq_85_left_knuckle_joint"/>
     </group>
-    
+
     <group_state name="open" group="gripper">
         <joint name="robotiq_85_left_finger_tip_joint" value="0"/>
         <joint name="robotiq_85_left_inner_knuckle_joint" value="0"/>
@@ -36,7 +36,7 @@
         <joint name="robotiq_85_right_inner_knuckle_joint" value="-0.7929"/>
         <joint name="robotiq_85_right_knuckle_joint" value="-0.7929"/>
     </group_state>
-    
+
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="moveit_ee" parent_link="tool0" group="gripper"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->

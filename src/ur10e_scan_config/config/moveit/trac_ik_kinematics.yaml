@@ -4,4 +4,3 @@ manipulator:
   kinematics_solver_attempts: 3
   epsilon: 0.0001
   solve_type: "Speed"
-

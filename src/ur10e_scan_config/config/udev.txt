@@ -1,0 +1,16 @@
+#
+# Ansible Managed File
+# This file was added by the MoveIt Studio ansible install scripts on: 2023-10-26
+# USE CAUTION WHEN MODIFYING
+# 
+#
+
+# Ensure all users have access to any connected RealSense cameras
+ACTION=="add", SUBSYSTEM=="video4linux", ATTRS{name}=="*RealSense*", MODE="0666"
+ACTION=="change", SUBSYSTEM=="video4linux", ATTRS{name}=="*RealSense*", MODE="0666"
+
+# Ensure all users have access to a connected Robotiq griper.
+# This is flimsy, but for now it is the only way we can identify and apply rules
+# to the connected device.
+ACTION=="add", SUBSYSTEM=="tty",  KERNEL=="ttyUSB0", MODE="0777"
+ACTION=="change", SUBSYSTEM=="tty",  KERNEL=="ttyUSB0", MODE="0777"

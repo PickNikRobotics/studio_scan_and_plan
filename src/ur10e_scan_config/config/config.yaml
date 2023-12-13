@@ -90,6 +90,9 @@ moveit_params:
   ompl_planning:
     package: "ur10e_scan_config"
     path: "config/moveit/ompl_planning.yaml"
+  stomp_planning:
+    package: "ur10e_scan_config"
+    path: "config/moveit/stomp_planning.yaml"
   kinematics:
     package: "ur10e_scan_config"
     path: "config/moveit/trac_ik_kinematics.yaml"

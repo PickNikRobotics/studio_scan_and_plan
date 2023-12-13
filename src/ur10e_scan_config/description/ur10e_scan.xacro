@@ -16,7 +16,7 @@
   <xacro:include filename="$(find robotiq_description)/urdf/ur_to_robotiq_adapter.urdf.xacro" />
   <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_85_macro.urdf.xacro" />
   <xacro:include filename="$(find picknik_accessories)/descriptions/brackets/ur_realsense_camera_adapter/picknik_ur_camera_adapter.urdf.xacro" />
-  <xacro:include filename="$(find picknik_accessories)/descriptions/sensors/realsense_d415.urdf.xacro" />
+  <xacro:include filename="$(find picknik_accessories)/descriptions/sensors/realsense_d435.urdf.xacro" />
 
   <!-- initial position for simulations (Fake Hardware, Gazebo, Ignition) -->
   <xacro:arg name="initial_positions_file" default="$(find ur10e_scan_config)/config/initial_positions.yaml"/>
@@ -25,6 +25,53 @@
   <xacro:property name="initial_positions_file" default="$(arg initial_positions_file)"/>
 
   <link name="world" />
+
+  <link name="weldTable">
+    <inertial>
+      <mass value = "0.5" />
+      <inertia ixx="0.0005" ixy="0.00005" ixz="0.0005" iyy="0.0005" iyz="0.0005" izz="0.0005" />
+    </inertial>
+    <visual>
+      <material name="grey"> 
+        <color rgba="0.5 0.5 0.5 1"/> 
+      </material>
+      <geometry>
+        <mesh filename = "file://$(find ur10e_scan_config)/description/meshes/weld_table.stl"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0.4 0 -0.0881" rpy="0 0 0"/> 
+      <geometry> <!-- Table Top -->
+        <box size="1.2 2.4 0.1"/> 
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.4 ${2.4/2-0.16} 0.75" rpy="0 0 0"/> 
+      <geometry> <!-- Left Wall -->
+        <box size="1.2 0.1 1.6"/> 
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.4 -${2.4/2-0.175} 0.75" rpy="0 0 0"/> 
+      <geometry> <!-- Right Wall -->
+        <box size="1.2 0.1 1.6"/> 
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.4 0 1.5" rpy="0 0 0"/> 
+      <geometry> <!-- Ceiling -->
+        <box size="1.2 2.4 0.1"/> 
+      </geometry>
+    </collision>
+  </link>
+
+
+    <joint name="weld_table_to_world" type ="fixed">
+      <origin xyz="0 0 0" rpy="0 0 ${pi}" />
+      <parent link="world"/>
+      <child link = "weldTable"/>
+    </joint>
 
   <!-- arm -->
   <xacro:ur_robot
@@ -48,9 +95,9 @@
   <!-- wrist camera adapter and camera-->
   <xacro:ur_realsense_camera_adapter prefix="" connected_to="tool0" rotation="0" />
 
-  <xacro:realsense_d415 parent="d415_mount_link" name="wrist_mounted_camera">
+  <xacro:realsense_d435 parent="d415_mount_link" name="wrist_mounted_camera">
     <origin xyz="0 0 0" rpy="0 0 0" />
-  </xacro:realsense_d415>
+  </xacro:realsense_d435>
 
   <!-- Gripper and UR adapter-->
   <xacro:ur_to_robotiq prefix="" connected_to="realsense_camera_adapter_tool0" rotation="0" />
@@ -83,7 +130,7 @@
     <origin xyz="-0.3 0.3 3.0" rpy="0.0 0.4 0" />
   </joint>
 
-  <xacro:realsense_d415 parent="scene_camera_mount_link" name="scene_camera">
+  <xacro:realsense_d435 parent="scene_camera_mount_link" name="scene_camera">
     <origin xyz="0 0 0" rpy="0 0 0" />
-  </xacro:realsense_d415>
+  </xacro:realsense_d435>
 </robot>

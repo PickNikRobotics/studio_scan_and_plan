@@ -2,11 +2,11 @@
     camera_name: "wrist_mounted_camera"
     type: "realsense"
     use: False
-    serial_no: ""
-    device_type: "D415"
+    serial_no: "922612071207"
+    device_type: "D435"
     framerate: 6
-    image_width: 640
-    image_height: 480
+    image_width: 1280
+    image_height: 720
     enable_pointcloud: True
 
     # information about the topics the camera publishes the raw image and info
@@ -20,17 +20,3 @@
       registered_info: "/wrist_mounted_camera/depth_registered/camera_info"
       registered_image: "/wrist_mounted_camera/depth_registered/image_rect"
 
-- scene_camera:
-    camera_name: "scene_camera"
-    type: "realsense"
-    use: False
-    serial_no: ""
-    device_type: "D415"
-    framerate: 6
-    image_width: 640
-    image_height: 480
-    enable_pointcloud: False
-
-    # information about the topics the camera publishes the raw image and info
-    rgb_info: "/scene_camera_1/color/camera_info"
-    rgb_image: "/scene_camera_1/color/image_raw"

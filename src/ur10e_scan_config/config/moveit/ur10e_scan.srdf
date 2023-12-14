@@ -49,6 +49,9 @@
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="base_link_inertia" link2="scene_camera_link" reason="Adjacent"/>
     <disable_collisions link1="base_link_inertia" link2="shoulder_link" reason="Adjacent"/>
+    <disable_collisions link1="base_link_inertia" link2="upper_arm_link" reason="Never"/>
+    <disable_collisions link1="base_link_inertia" link2="weldTable" reason="Adjacent"/>
+    <disable_collisions link1="base_link_inertia" link2="wrist_1_link" reason="Never"/>
     <disable_collisions link1="forearm_link" link2="scene_camera_link" reason="Never"/>
     <disable_collisions link1="forearm_link" link2="upper_arm_link" reason="Adjacent"/>
     <disable_collisions link1="forearm_link" link2="wrist_1_link" reason="Adjacent"/>
@@ -161,11 +164,14 @@
     <disable_collisions link1="scene_camera_link" link2="shoulder_link" reason="Never"/>
     <disable_collisions link1="scene_camera_link" link2="upper_arm_link" reason="Never"/>
     <disable_collisions link1="scene_camera_link" link2="ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="scene_camera_link" link2="weldTable" reason="Adjacent"/>
     <disable_collisions link1="scene_camera_link" link2="wrist_1_link" reason="Never"/>
     <disable_collisions link1="scene_camera_link" link2="wrist_2_link" reason="Never"/>
     <disable_collisions link1="scene_camera_link" link2="wrist_3_link" reason="Never"/>
     <disable_collisions link1="scene_camera_link" link2="wrist_mounted_camera_link" reason="Never"/>
     <disable_collisions link1="shoulder_link" link2="upper_arm_link" reason="Adjacent"/>
+    <disable_collisions link1="shoulder_link" link2="weldTable" reason="Never"/>
+    <disable_collisions link1="shoulder_link" link2="wrist_1_link" reason="Never"/>
     <disable_collisions link1="ur_to_robotiq_link" link2="wrist_1_link" reason="Never"/>
     <disable_collisions link1="ur_to_robotiq_link" link2="wrist_2_link" reason="Never"/>
     <disable_collisions link1="ur_to_robotiq_link" link2="wrist_3_link" reason="Never"/>

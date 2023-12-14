@@ -197,5 +197,32 @@
       </link>
     </model>
 
+    <!-- AprilTags -->
+    <model name="apriltag_01">
+      <pose>-0.5 0.3 1.03 0 0 0</pose>
+      <link name="apriltag">
+        <visual name="apriltag_visual">
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>package://picknik_ur_gazebo_config/description/apriltags/tag36_11_00001.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <inertial>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+          <mass>0.01</mass>
+        </inertial>
+      </link>
+      <static>1</static>
+    </model>
+
   </world>
 </sdf>

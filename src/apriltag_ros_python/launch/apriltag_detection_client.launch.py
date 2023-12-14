@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """ Launch the AprilTag detection test client. """
 
 from launch import LaunchDescription

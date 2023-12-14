@@ -3,7 +3,7 @@
         <Action ID="TransformPrintPose">
             <description>
                 <p>
-                    print pose to counsel 
+                    print pose to counsel
                 </p>
             </description>
             <input_port name = "input_pose" default="{pose}">Pose Stamped to print.</input_port>

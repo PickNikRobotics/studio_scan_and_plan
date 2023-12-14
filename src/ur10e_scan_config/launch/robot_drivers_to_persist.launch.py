@@ -9,6 +9,7 @@
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
 from launch_ros.actions import Node
+from launch.launch_description_sources import AnyLaunchDescriptionSource
 from moveit_studio_utils_py.launch_common import empty_gen, get_launch_file
 from moveit_studio_utils_py.system_config import (
     SystemConfigParser,
@@ -50,9 +51,23 @@ def generate_launch_description():
         ],
     )
 
+    tool_comms_launch = IncludeLaunchDescription(
+        AnyLaunchDescriptionSource(
+            [
+                "/home/agile/user_ws/src/studio_scan_and_plan/src/ur10e_scan_config/launch/ur_tool_comms.launch.xml"
+            ]
+        ),
+        launch_arguments={
+            "robot_ip": hardware_config["ip"],
+            "tool_tcp_port": "54321",
+            "tool_device_name": "/tmp/ttyUR",
+        }.items(),
+    )
+
     nodes_to_launch = [
         dashboard_client_node,
         protective_stop_manager_node,
+        tool_comms_launch,
     ]
 
     for camera in cameras_config:

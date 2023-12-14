@@ -19,4 +19,3 @@
       depth_image: "/wrist_mounted_camera/depth/image_rect_raw"
       registered_info: "/wrist_mounted_camera/depth_registered/camera_info"
       registered_image: "/wrist_mounted_camera/depth_registered/image_rect"
-

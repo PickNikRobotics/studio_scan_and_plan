@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 ROS 2 Node with a service client to test AprilTag detections.
 """

@@ -1,9 +1,9 @@
-#include <gtest/gtest.h>
-
 #include <behaviortree_cpp/bt_factory.h>
-#include <moveit_studio_behavior_interface/shared_resources_node_loader.hpp>
+#include <gtest/gtest.h>
 #include <pluginlib/class_loader.hpp>
 #include <rclcpp/node.hpp>
+
+#include <moveit_studio_behavior_interface/shared_resources_node_loader.hpp>
 
 /**
  * @brief This test makes sure that the Behaviors provided in this package can be successfully registered and
@@ -25,7 +25,7 @@ TEST(BehaviorTests, test_load_behavior_plugins)
 
   // Test that ClassLoader is able to find and instantiate each behavior using the package's plugin description info.
   EXPECT_NO_THROW(
-    (void)factory.instantiateTreeNode("test_behavior_name", "TransformPrintPose", BT::NodeConfiguration()));
+      (void)factory.instantiateTreeNode("test_behavior_name", "TransformPrintPose", BT::NodeConfiguration()));
 }
 
 int main(int argc, char** argv)

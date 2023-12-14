@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 ROS 2 Node hosting a service that performs AprilTag detections.
 """

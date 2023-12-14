@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """ Launch the AprilTag detection server node. """
 
 from launch import LaunchDescription

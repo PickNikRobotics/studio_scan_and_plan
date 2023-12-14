@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Copyright 2023 PickNik Inc.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -254,10 +255,7 @@ def generate_launch_description():
     aprilTag_server = Node(
         package="apriltag_ros_python",
         executable="apriltag_detection_server",
-        parameters=[{
-                "visualize": True,
-                "apriltag_family": "tag36h11"
-        }],
+        parameters=[{"visualize": True, "apriltag_family": "tag36h11"}],
         output="both",
     )
 

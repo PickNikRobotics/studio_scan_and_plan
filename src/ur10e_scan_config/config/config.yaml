@@ -19,7 +19,7 @@ hardware:
   launch_cameras_when_simulated: False
 
   # The robot's IP address
-  ip: 192.168.7.11
+  ip: 169.254.121.40
 
   robot_driver_persist_launch_file:
     package: "ur10e_scan_config"
@@ -163,6 +163,8 @@ objectives:
   behavior_loader_plugins:
     core:
       - "moveit_studio::behaviors::CoreBehaviorsLoader"
+    my_behaviors:
+      - "transform_print_pose::TransformPrintPoseBehaviorsLoader"
   objective_library_paths:
     core:
       package_name: "ur10e_scan_config"

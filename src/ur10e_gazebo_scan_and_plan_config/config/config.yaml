@@ -9,6 +9,10 @@ hardware:
   # Used by the ur_description package to set kinematics and geometry for a specific robot type.
   type: "ur10e"
 
+  simulated_hardware_launch_file:
+    package: "ur10e_gazebo_scan_and_plan_config"
+    path: "launch/sim/hardware_sim.launch.py"
+
   # because we are using the picknik_ur_gazebo_config as the base package we need a custom srdf that matches the ur10 robot
   robot_description:
     srdf:
@@ -21,6 +25,9 @@ optional_feature_params:
   gazebo_world_path: "description/simulation_worlds/scan_and_plan_world.sdf"
 
 objectives:
+  behavior_loader_plugins:
+    april_tag:
+      - "get_apriltag_detection_pose::GetApriltagDetectionPoseBehaviorsLoader"
   # Override with a new set of waypoints based on the Gazebo world.
   waypoints_file:
     package_name: "ur10e_scan_config"
